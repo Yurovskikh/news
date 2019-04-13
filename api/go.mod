@@ -1,7 +1,7 @@
 module github.com/Yurovskikh/news/api
 
 require (
-	github.com/Yurovskikh/news/pb v0.0.0-20190413052557-8251e38a0a03
+	github.com/Yurovskikh/news/pb v0.0.0-20190413122106-60bf1d868fb3
 	github.com/go-kit/kit v0.8.0
 	github.com/go-logfmt/logfmt v0.4.0 // indirect
 	github.com/golang/protobuf v1.2.0

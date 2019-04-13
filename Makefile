@@ -1,7 +1,8 @@
 build:
-	@GOOS=linux GOARCH=amd64 go build -o ./api
+	@cd api/ && GOOS=linux GOARCH=amd64 go build -o api
+	@cd storage/ && GOOS=linux GOARCH=amd64 go build -o storage
 
-start:
+start:build
 	@docker-compose up -d --force-recreate --build
 
 pb:
