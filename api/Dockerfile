@@ -1,0 +1,5 @@
+FROM alpine
+WORKDIR /bin
+ADD api /bin/
+ENTRYPOINT ./api
+EXPOSE 8080

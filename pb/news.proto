@@ -1,0 +1,28 @@
+syntax = "proto3";
+package pb;
+
+message GetNewsByIdRequest {
+    uint64 id = 1;
+}
+
+message GetNewsByIdResponse {
+    News news = 1;
+    bool sucess = 2;
+    string err = 3;
+}
+
+message CreateNewsRequest {
+    News news = 1;
+}
+
+message CreateNewsResponse {
+    News news = 1;
+    bool sucess = 2;
+    string err = 3;
+}
+
+message News {
+    uint64 id = 1;
+    string header = 2;
+    int64 date = 3;
+}

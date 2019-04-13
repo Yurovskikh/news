@@ -1,0 +1,30 @@
+version: '3'
+services:
+  api:
+    build: api
+    ports:
+      - "8080:8080"
+    env_file:
+      - api/config/env.list
+    depends_on:
+      - nats
+      - storage
+  storage:
+    build: storage
+    env_file:
+      - storage/config/env.list
+    depends_on:
+      - nats
+      - postgres
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    env_file:
+      - storage/config/env.list
+  nats:
+    image: nats
+    expose:
+      - "4222"
+    ports:
+      - "8222:8222"
